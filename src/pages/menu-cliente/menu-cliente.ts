@@ -15,7 +15,13 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
 })
 export class MenuClientePage {
 
+  qrData = null;
+  createdCode = null;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  createCode(){
+    this.createdCode = this.qrData;
   }
 
   ionViewDidLoad() {

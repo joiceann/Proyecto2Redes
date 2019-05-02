@@ -4,21 +4,16 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-          <ion-icon name="time"></ion-icon>
-      </ion-col>
-      <ion-col>
-        
-                
-      </ion-col>
-      <ion-col>
-        
-      </ion-col>
-    </ion-row>
-  </ion-grid>
- 
 
+<ion-content class="hola">
+  <ion-item>
+    <ion-input type="text" placeholder="My QR Data" [(ngModel)]="qrData"></ion-input>
+  </ion-item>
+  <button ion-button full (click)="createCode()">Crear Codigo QR</button>
+  <ion-card *ngIf="createdCode">
+  <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+    <ion-card-content>
+      <p >Value: {{ createdCode }}</p>
+    </ion-card-content>  
+  </ion-card>
 </ion-content>

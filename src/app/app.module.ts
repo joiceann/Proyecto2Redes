@@ -11,6 +11,8 @@ import { HomePage } from '../pages/home/home';
 import {LoginPage} from '../pages/login/login';
 import {MenuClientePage } from '../pages/menu-cliente/menu-cliente';
 import {MenuRestPage} from '../pages/menu-rest/menu-rest'
+import {NgxQRCodeModule} from 'ngx-qrcode2';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import {MenuRestPage} from '../pages/menu-rest/menu-rest'
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
+    NgxQRCodeModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,7 +40,7 @@ import {MenuRestPage} from '../pages/menu-rest/menu-rest'
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Md5
+    Md5,
   ]
 })
 export class AppModule {}
