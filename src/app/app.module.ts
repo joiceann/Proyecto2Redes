@@ -11,6 +11,7 @@ import { HomePage } from '../pages/home/home';
 import {LoginPage} from '../pages/login/login';
 import {MenuClientePage } from '../pages/menu-cliente/menu-cliente';
 import {MenuRestPage} from '../pages/menu-rest/menu-rest'
+import {PickTimePage} from '../pages/pick-time/pick-time'
 import {NgxQRCodeModule} from 'ngx-qrcode2';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
@@ -20,7 +21,8 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     HomePage,
     LoginPage,
     MenuClientePage,
-    MenuRestPage
+    MenuRestPage,
+    PickTimePage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     LoginPage,
     HomePage,
     MenuClientePage,
-    MenuRestPage
+    MenuRestPage,
+    PickTimePage
   ],
   providers: [
     StatusBar,

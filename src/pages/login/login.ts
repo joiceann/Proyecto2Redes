@@ -6,12 +6,16 @@ import { Storage } from '@ionic/storage';
 import {MenuClientePage } from './../menu-cliente/menu-cliente';
 import {MenuRestPage} from './../menu-rest/menu-rest'
 import { CodegenComponentFactoryResolver } from '@angular/core/src/linker/component_factory_resolver';
+// import firebase from 'firebase';
 
 @IonicPage()
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
 })
+
+
+
 export class LoginPage {
   public form: FormGroup;
   public usuario: string = "";
@@ -24,6 +28,9 @@ export class LoginPage {
   public usuariosGuardados: any;
   public adminsGuardados: any;
   
+  /* createPerson(firstName: string, lastName: string): void {
+    const personRef: firebase.database.Reference = firebase.database().ref(`/person1/`);
+  } */
 
   constructor(
     public navCtrl: NavController, 

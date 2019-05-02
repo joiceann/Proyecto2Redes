@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import { PickTimePage } from '../pick-time/pick-time';
+
 /**
  * Generated class for the MenuClientePage page.
  *
@@ -15,7 +16,13 @@ import { PickTimePage } from '../pick-time/pick-time';
 })
 export class MenuClientePage {
 
+  qrData = null;
+  createdCode = null;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  createCode(){
+    this.createdCode = this.qrData;
   }
 
   ionViewDidLoad() {
