@@ -6,7 +6,6 @@ import { Storage } from '@ionic/storage';
 import {MenuClientePage } from './../menu-cliente/menu-cliente';
 import {MenuRestPage} from './../menu-rest/menu-rest'
 import { CodegenComponentFactoryResolver } from '@angular/core/src/linker/component_factory_resolver';
-import { Firebase } from '@ionic-native/firebase/ngx';
 
 @IonicPage()
 @Component({
