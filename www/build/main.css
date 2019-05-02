@@ -25691,3 +25691,11 @@ ion-navbar.toolbar {
   padding-bottom: 4px;
   min-height: 46px;
 }
+
+page-menu-cliente .larger {
+  font-size: 100px;
+}
+
+page-menu-cliente .high {
+  height: 100px;
+}
