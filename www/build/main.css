@@ -4872,6 +4872,10 @@ textarea::-webkit-input-placeholder {
   padding-left: 2px;
 }
 
+textarea::-moz-placeholder {
+  padding-left: 2px;
+}
+
 textarea::-ms-input-placeholder {
   padding-left: 2px;
 }
@@ -25692,10 +25696,26 @@ ion-navbar.toolbar {
   min-height: 46px;
 }
 
+page-firmas .center {
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 100%;
+}
+
 page-menu-cliente .larger {
   font-size: 100px;
 }
 
 page-menu-cliente .high {
-  height: 100px;
+  height: 250px;
+}
+
+page-menu-cliente .center {
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 100%;
+}
+
+page-menu-cliente .vertical {
+  vertical-align: middle;
 }

@@ -11,9 +11,13 @@ import { HomePage } from '../pages/home/home';
 import {LoginPage} from '../pages/login/login';
 import {MenuClientePage } from '../pages/menu-cliente/menu-cliente';
 import {MenuRestPage} from '../pages/menu-rest/menu-rest'
+import {FirmasPage} from '../pages/firmas/firmas'
+
+
 import {PickTimePage} from '../pages/pick-time/pick-time'
 import {NgxQRCodeModule} from 'ngx-qrcode2';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,8 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     LoginPage,
     MenuClientePage,
     MenuRestPage,
-    PickTimePage
+    PickTimePage,
+    FirmasPage
   ],
   imports: [
     BrowserModule,
@@ -37,13 +42,15 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     HomePage,
     MenuClientePage,
     MenuRestPage,
-    PickTimePage
+    PickTimePage,
+    FirmasPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Md5,
+    QRScanner
   ]
 })
 export class AppModule {}

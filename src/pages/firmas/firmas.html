@@ -1,0 +1,23 @@
+<ion-header>
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  <ion-navbar>
+    <ion-title class="center">Historial de Firmas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let firma of firmas">
+      <ion-thumbnail item-start>
+        <img src="../../assets/imgs/rate.png" />
+      </ion-thumbnail>
+      <ion-item>
+          <h2>{{firma.fecha}}</h2>
+      </ion-item>
+      <ion-item>
+        <strong>Sede:</strong> {{ firma.restaurante }}
+      </ion-item>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

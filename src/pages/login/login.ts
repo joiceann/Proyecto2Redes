@@ -42,6 +42,7 @@ export class LoginPage {
     public storage: Storage
     ) {
       this.preparar_usuarios();
+      this.preparar_firmas();
       this.prepara_forma();
   }
 
@@ -75,6 +76,23 @@ export class LoginPage {
     let admins=[admin]
     localStorage.setItem('administradores', JSON.stringify(admins))
     console.log('guardado')
+  }
+
+
+  preparar_firmas(){
+    let firm={
+      "fecha": "02/02/2019",
+      "restaurante": "Majadas",
+    }
+    let firm1={
+      "fecha": "03/01/2019",
+      "restaurante": "Miraflores",
+    }
+
+    let firmas=[firm, firm1]
+    localStorage.setItem('firmas', JSON.stringify(firmas))
+    console.log('guardado')
+
   }
 
 

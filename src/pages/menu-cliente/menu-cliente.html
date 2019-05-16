@@ -1,40 +1,48 @@
 <ion-header>
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
   <ion-navbar>
-    <ion-title>MENU CLIENTE</ion-title>
+    <ion-title class="center"> MENU CLIENTE</ion-title>
   </ion-navbar>
 </ion-header>
 
 
-<ion-content class="hola">
-
-    <ion-grid>
-        <ion-row center>
-          <ion-col>
-            <button ion-button class="high" (click)="goPickTime()">
-              <ion-icon slot="icon-only" name="time" class="larger">
-              </ion-icon>
-            </button>
-          </ion-col>
-          <ion-col>
-            <button ion-button class="high" (click)="createCode()">
-              <ion-icon slot="icon-only" name="qr-scanner" class="larger">
-              </ion-icon>
-            </button>
-            <ion-card *ngIf="createdCode">
-                <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
-                  <ion-card-content>
-                    <p >Value: {{ createdCode }}</p>
-                  </ion-card-content>  
-                </ion-card>
-          </ion-col>
-          <ion-col>
-            <button ion-button class="high">
-              <ion-icon slot="icon-only" name="book" class="larger">
-              </ion-icon>
-            </button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+<ion-content>
+  <ion-grid class="vertical">
+    <ion-row center>
+      <ion-col>
+        <button ion-button class="high" (click)="goPickTime()" shape="round">
+          <img src="../../assets/imgs/cloche.png"
+            style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button class="high" (click)="createCode()">
+          <img src="../../assets/imgs/qr-code.png"
+            style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+        </button>
+        <ion-card *ngIf="createdCode">
+          <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+          <ion-card-content>
+            <p>Value: {{ createdCode }}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button class="high" (click)="goFirmas()">
+          <img src="../../assets/imgs/award.png"
+            style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button class="high" disabled=true>
+          <img src="../../assets/imgs/business.png"
+            style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 
 
@@ -42,5 +50,5 @@
     <ion-input type="text" placeholder="My QR Data" [(ngModel)]="qrData"></ion-input>
   </ion-item>
   <!-- <button ion-button full (click)="createCode()">Crear Codigo QR</button> -->
-  
+
 </ion-content>
