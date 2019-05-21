@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController  } from 'ionic-angular';
-import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
-
-/**
- * Generated class for the PickTimePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {ReservarPage} from '../reservar/reservar';
 
 @IonicPage()
 @Component({
@@ -15,30 +8,34 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
   templateUrl: 'pick-time.html',
 })
 export class PickTimePage {
-  public form: FormGroup;
-  public errormsg: string = "";
+  public reservas: any;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public fb: FormBuilder,
     public loadingCtrl: LoadingController,
     public alertCtrl: AlertController,
     ) {
-      this.prepara_forma();
+      this.cargar_reservas();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PickTimePage');
   }
 
-  prepara_forma() {
-    this.errormsg = "";
-    this.form = new FormGroup({
-      usuario: new FormControl('',Validators.required),
-      clave: new FormControl('', Validators.required),
-      restaurante: new FormControl('', Validators.required)
-    });
+  cargar_reservas(){
+    this.reservas = JSON.parse(localStorage.getItem('reservas'))
+    if (this.reservas===null || this.reservas===undefined){
+      this.reservas=[]
+    }
+  }
+
+  go_reservas(){
+    this.navCtrl.push(ReservarPage);
+  }
+
+  unique_id(){
+    return Math.random().toString(36).substr(2, 9);
   }
 
 }

@@ -25696,6 +25696,28 @@ ion-navbar.toolbar {
   min-height: 46px;
 }
 
+.baloo {
+  font-family: 'Baloo Bhai', cursive;
+}
+
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.anton {
+  font-family: 'Anton', sans-serif;
+}
+
+.yanone {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.center {
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 100%;
+}
+
 page-firmas .center {
   text-align: center;
   font-family: 'Anton', sans-serif;
@@ -25718,4 +25740,32 @@ page-menu-cliente .center {
 
 page-menu-cliente .vertical {
   vertical-align: middle;
+}
+
+page-pick-time .center {
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 100%;
+}
+
+page-pick-time .baloo {
+  font-family: 'Baloo Bhai', cursive;
+}
+
+page-pick-time .poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+page-pick-time .anton {
+  font-family: 'Anton', sans-serif;
+}
+
+page-pick-time .yanone {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+page-reservar .center {
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 100%;
 }

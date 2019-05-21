@@ -1,0 +1,39 @@
+<ion-header>
+  <link href="https://fonts.googleapis.com/css?family=Anton|Baloo+Bhai|Poppins|Yanone+Kaffeesatz&display=swap"
+    rel="stylesheet">
+  <ion-navbar>
+    <ion-title class="center">NUEVA RESERVA</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="poppins" vertical-align=middle>
+  <ion-list>
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+      <ion-item>
+        <ion-label>Nombre </ion-label>
+        <ion-input type="text" ngControl="nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Sede</ion-label>
+        <ion-select ngControl="sede">
+          <ion-option value="f">motivo1</ion-option>
+          <ion-option value="m">motivo2</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Fecha</ion-label>
+        <ion-datetime display-format="MMMM YYYY" min="2019" ngControl="fecha"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Hora</ion-label>
+        <ion-datetime displayFormat="h:mm a" ngControl="hora"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label> Cantidad de personas</ion-label>
+        <ion-input type=number> </ion-input>
+      </ion-item>
+      <button ion-button type="submit" block primary outline [disabled]="!form.valid">Ready</button>
+    </form>
+  </ion-list>
+
+</ion-content>

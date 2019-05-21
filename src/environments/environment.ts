@@ -1,12 +1,23 @@
 
-export const environment = {
+export const firebase_config = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyDqTPv0qgwdxLi3tUB5RnsuhTffYUWa59o",
-    authDomain: "redes-2c4a2.firebaseapp.com",
-    databaseURL: "https://redes-2c4a2.firebaseio.com",
-    projectId: "redes-2c4a2",
-    storageBucket: "redes-2c4a2.appspot.com",
-    messagingSenderId: "852352712022"
+    apiKey: "AIzaSyCtlC_icvipczPGhpHS2d7kPv2cLdoCD0c",
+    authDomain: "proyectoredes-b7b7f.firebaseapp.com",
+    databaseURL: "https://proyectoredes-b7b7f.firebaseio.com",
+    projectId: "proyectoredes-b7b7f",
+    storageBucket: "proyectoredes-b7b7f.appspot.com",
+    messagingSenderId: "714215123710"
   }
 };
+
+
+export const snapshotToArray = snapshot =>{
+  let returnArray = [];
+  snapshot.array.forEach(element => {
+    let item = element.val();
+    item.key = element.key;
+    returnArray.push(item);
+  });
+  return returnArray
+}

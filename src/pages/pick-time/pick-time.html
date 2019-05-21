@@ -5,26 +5,45 @@
   Ionic pages and navigation.
 -->
 <ion-header>
+  <link href="https://fonts.googleapis.com/css?family=Anton|Baloo+Bhai|Poppins|Yanone+Kaffeesatz&display=swap"
+    rel="stylesheet">
   <ion-navbar>
-    <ion-title>pick-time</ion-title>
+    <ion-title class="center">RESERVAS</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="go_reservas()">
+        <ion-icon name="add-circle" color="secondary"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    <ion-list>
-        <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" >
-            <ion-item>
-                <ion-label>Nombre </ion-label>
-                <ion-input type="text" ngControl="title"></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-label>Date</ion-label>
-                <ion-datetime display-format="MMMM YYYY" min="2019"></ion-datetime>
-              </ion-item>
-          <button ion-button type="submit" block primary outline [disabled]="!form.valid">Ready</button>
-        </form>
-    
-      </ion-list>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let reserva of reservas" class="poppins">
+
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="../../assets/imgs/calendar.png" />
+        </ion-thumbnail>
+
+        <strong class="poppins">{{reserva.data.sede}}</strong>
+        <h3>Fecha:</h3> {{ reserva.data.fecha }}
+        <h3>Cantidad de personas:</h3> {{ reserva.data.cantidad }}
+      </ion-item>
+
+      <ion-item-options side="right">
+        <button ion-button (click)="unread(item)" color="danger">Eliminar</button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+
+    <ion-item *ngFor="let reserva of reservas">
+
+
+
+
+    </ion-item>
+  </ion-list>
 
 </ion-content>
-
