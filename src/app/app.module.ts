@@ -35,13 +35,13 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 
 var config = {
-  apiKey: "AIzaSyCtlC_icvipczPGhpHS2d7kPv2cLdoCD0c",
-  authDomain: "proyectoredes-b7b7f.firebaseapp.com",
-  databaseURL: "https://proyectoredes-b7b7f.firebaseio.com",
-  projectId: "proyectoredes-b7b7f",
-  storageBucket: "proyectoredes-b7b7f.appspot.com",
-  messagingSenderId: "714215123710",
-  appId: "1:714215123710:web:995da11a9929ee41"
+  apiKey: "******",
+  authDomain: "*****",
+  databaseURL: "************",
+  projectId: "***",
+  storageBucket: "*",
+  messagingSenderId: "***",
+  appId: "*****"
 };
 
 @NgModule({
